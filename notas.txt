@@ -1,0 +1,34 @@
+Dependencias (no package.json)
+
+"dependencies": {
+   *** "body-parser": "^1.20.1", - Body-parser é um módulo do Node.js que faz parte do middleware do Express. Ele é usado para analisar os dados da solicitação HTTP e transformá-los em um formato que possa ser usado pelo aplicativo. Por exemplo, se a solicitação é feita com um corpo de dados em formato JSON, o body-parser pode transformar esses dados em um objeto JavaScript para que seja mais fácil de trabalhar com eles na aplicação. Além disso, o body-parser também pode ser configurado para analisar outros tipos de corpos de dados, como formulários HTML ou dados em formato de URL codificados.
+   
+   ** "express": "^4.18.2", - é um framework para Node.js que fornece recursos mínimos para construção de servidores web (HTTP)
+
+
+   ** "express-handlebars": "^6.0.6", Express-handlebars é um módulo do Node.js que é usado para criar templates para aplicativos web com o Express. Ele é baseado no motor de templates Handlebars.js e fornece uma maneira fácil de criar templates HTML reutilizáveis com variáveis dinâmicas e lógica de programação. Isso permite que você crie páginas da web que são personalizadas de acordo com os dados de entrada e mantenha a lógica de negócios separada do HTML. Ao usar express-handlebars, é possível criar a estrutura básica de uma página da web como um template e, em seguida, preencher os dados dinâmicos usando variáveis. Isso pode ser muito útil para criar aplicativos web com múltiplas páginas que compartilham uma estrutura semelhante.
+
+   ** "sequelize": "^6.28.0", -Ele permite que você acesse bancos de dados relacionais como se fossem objetos JavaScript, simplificando o trabalho com banco de dados em aplicações Node.js
+
+   ** "sqlite3": "^5.1.4"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20" : monitora as alterações em arquivos do seu aplicativo e automaticamente reinicia o servidor quando são detectadas alterações
+  }
+
+  -Script (no package.json)
+
+  No Script preciso criar o seguinte comando, que permite que sempre que se fizer uma alteração no código, automaticamente seja mostrado no navegador:
+  "dev": "nodemon app.js"
+  Ao rodar no terminal, devo digita: npm run dev
+
+  -Foi criada a pasta db que é o banco de dados da aplicação. Foi usado o sqlite que permite a criação de banco de dados menores. 
+  Toda a conexão é criada por comandos em JS (cria-se uma nova instância). O Sequelize é que gerencia a criação e manipulação deste banco
+
+  -DB browser foi instalado para ajudar a visualizar os dados do banco. Ele permite uma visualização gráfica dos dados
+
+  -Na pasta models foi criado um arquivo js (Job - padrão é ser letra maiscula) para criar a abstração do banco de dados
+
+  -Na pasta routes foram criadas todas as rotas (acessos)
+
+  -Handlebars: é um motor de modelos JavaScript que permite aos desenvolvedores criar páginas HTML dinâmicas. Ele é usado para renderizar modelos de dados em páginas HTML, permitindo que os dados sejam atualizados dinamicamente sem precisar recarregar a página.
